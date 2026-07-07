@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MarkPrivacy – Data Privacy & Consent Management Consultancy</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home" class="nav-logo">
+    <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2 L36 9 L36 22 C36 30 28.5 36.5 20 38 C11.5 36.5 4 30 4 22 L4 9 Z" fill="#1E5FC2"/>
+      <path d="M20 4 L34 10.5 L34 22 C34 29 27.5 34.5 20 36 C12.5 34.5 6 29 6 22 L6 10.5 Z" fill="#0A1628"/>
+      <path d="M14 20 L18 24 L26 16" stroke="#00D4FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="14" r="3" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+      <path d="M17 14 C17 12.3 18.3 11 20 11 C21.7 11 23 12.3 23 14" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="nav-title">Mark<span>Privacy</span></span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <canvas id="particles"></canvas>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">Trusted Privacy Experts</div>
+      <h1 class="hero-title">
+        Your Data.<br>
+        Your <span class="accent">Rights.</span><br>
+        Our Mission.
+      </h1>
+      <p class="hero-desc">MarkPrivacy helps organisations build trust through robust data privacy compliance, consent management, and regulatory alignment across GDPR, CCPA, DPDPA, and HIPAA — led by an OneTrust Certified consultant with 12+ years of enterprise delivery experience.</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <button class="btn-outline" onclick="openModal('free-audit')">Get Free Audit →</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">12+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Privacy Laws Covered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="shield-graphic" viewBox="0 0 440 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#00D4FF" stop-opacity=".25"/>
+            <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1E5FC2"/>
+            <stop offset="100%" stop-color="#0A2A5C"/>
+          </linearGradient>
+        </defs>
+        <circle cx="220" cy="190" r="160" fill="url(#glow)"/>
+        <path d="M220 40 L330 85 L330 185 C330 245 280 295 220 320 C160 295 110 245 110 185 L110 85 Z" fill="url(#shieldGrad)" stroke="#1E5FC2" stroke-width="2"/>
+        <path d="M220 55 L315 95 L315 183 C315 237 270 283 220 305 C170 283 125 237 125 183 L125 95 Z" fill="none" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
+        <circle cx="220" cy="170" r="45" fill="none" stroke="rgba(0,212,255,0.4)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <circle cx="220" cy="160" r="18" fill="none" stroke="#00D4FF" stroke-width="2"/>
+        <path d="M211 160 C211 155.6 215.1 152 220 152 C224.9 152 229 155.6 229 160" stroke="#00D4FF" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <rect x="211" y="160" width="18" height="16" rx="3" fill="#00D4FF"/>
+        <circle cx="220" cy="168" r="2.5" fill="#0A1628"/>
+        <!-- orbit dots -->
+        <circle cx="220" cy="125" r="5" fill="#00D4FF" opacity=".9">
+          <animateTransform attributeName="transform" type="rotate" from="0 220 170" to="360 220 170" dur="8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="260" cy="200" r="4" fill="#1E5FC2" opacity=".8">
+          <animateTransform attributeName="transform" type="rotate" from="90 220 170" to="450 220 170" dur="12s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="185" cy="195" r="3.5" fill="#00D4FF" opacity=".6">
+          <animateTransform attributeName="transform" type="rotate" from="200 220 170" to="560 220 170" dur="10s" repeatCount="indefinite"/>
+        </circle>
+        <!-- labels -->
+        <rect x="80" y="100" width="68" height="26" rx="6" fill="rgba(30,95,194,0.35)" stroke="rgba(0,212,255,0.5)" stroke-width="1"/>
+        <text x="114" y="117" fill="#00D4FF" font-size="9" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600">GDPR</text>
+        <rect x="295" y="100" width="68" height="26" rx="6" fill="rgba(30,95,194,0.35)" stroke="rgba(0,212,255,0.5)" stroke-width="1"/>
+        <text x="329" y="117" fill="#00D4FF" font-size="9" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600">CCPA</text>
+        <rect x="290" y="220" width="68" height="26" rx="6" fill="rgba(30,95,194,0.35)" stroke="rgba(0,212,255,0.5)" stroke-width="1"/>
+        <text x="324" y="237" fill="#00D4FF" font-size="9" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600">DPDPA</text>
+        <rect x="72" y="220" width="68" height="26" rx="6" fill="rgba(30,95,194,0.35)" stroke="rgba(0,212,255,0.5)" stroke-width="1"/>
+        <text x="106" y="237" fill="#00D4FF" font-size="9" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600">HIPAA</text>
+        <circle cx="220" cy="215" r="4" fill="#00D4FF" opacity=".75">
+          <animateTransform attributeName="transform" type="rotate" from="270 220 170" to="630 220 170" dur="14s" repeatCount="indefinite"/>
+        </circle>
+        <line x1="148" y1="113" x2="175" y2="155" stroke="rgba(0,212,255,0.25)" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="295" y1="113" x2="268" y2="155" stroke="rgba(0,212,255,0.25)" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="290" y1="233" x2="265" y2="200" stroke="rgba(0,212,255,0.25)" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="140" y1="233" x2="165" y2="205" stroke="rgba(0,212,255,0.25)" stroke-width="1" stroke-dasharray="3 3"/>
+      </svg>
+      <div class="trust-badges">
+        <div class="badge"><strong>GDPR</strong>Compliant</div>
+        <div class="badge"><strong>CCPA</strong>Ready</div>
+        <div class="badge"><strong>DPDPA</strong>Aligned</div>
+        <div class="badge"><strong>OneTrust</strong>Certified</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DATA PRIVACY MATTERS -->
+<section id="home-content">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="centered">
+      <div class="section-label">Why It Matters</div>
+      <h2 class="section-title">Data Privacy is No Longer <span class="accent">Optional</span></h2>
+      <p class="section-sub">In a world of global data flows, regulatory fines, and growing consumer expectations — privacy compliance is a business imperative, not just a checkbox.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🛡️</div>
+        <h3>Regulatory Compliance</h3>
+        <p>GDPR, CCPA, and India's DPDPA impose strict obligations on how personal data is collected, processed, and stored. Non-compliance carries severe financial penalties.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h3>Building Consumer Trust</h3>
+        <p>81% of consumers say trust is a deciding factor when sharing personal data. A strong privacy posture translates directly to brand loyalty and business growth.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚖️</div>
+        <h3>Consent Management</h3>
+        <p>Valid, informed, and granular consent is the cornerstone of lawful data processing. Without it, your marketing and analytics operations face existential risk.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔒</div>
+        <h3>Data Breach Prevention</h3>
+        <p>A privacy-by-design approach reduces breach risk. Average cost of a data breach globally is $4.45M — privacy investment pays for itself many times over.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📊</div>
+        <h3>Competitive Advantage</h3>
+        <p>Privacy-forward companies attract enterprise contracts, investors, and talent who increasingly treat data stewardship as a key selection criterion.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌐</div>
+        <h3>Cross-Border Data Flows</h3>
+        <p>Operating globally? Data transfer mechanisms, SCCs, and adequacy decisions are critical. Get them wrong and your international operations grind to a halt.</p>
+      </div>
+    </div>
+    <div class="centered" style="margin-top:52px;">
+      <div class="section-label">Regulations We Cover</div>
+      <div class="law-strips">
+        <span class="law-pill gdpr">🇪🇺 GDPR – Europe</span>
+        <span class="law-pill ccpa">🇺🇸 CCPA / CPRA – California</span>
+        <span class="law-pill dpdpa">🇮🇳 DPDPA – India</span>
+        <span class="law-pill lgpd">🇧🇷 LGPD – Brazil</span>
+        <span class="law-pill pipeda">🇨🇦 PIPEDA – Canada</span>
+      </div>
+    </div>
+    <!-- Offer Banner -->
+    <div class="offer-banner">
+      <div>
+        <div class="offer-tag">⚡ Limited Time Offer</div>
+        <h3>Free Privacy Gap Assessment</h3>
+        <p>Book a complimentary 60-minute consultation. We'll map your data flows, identify compliance gaps, and give you a prioritised roadmap — at no cost.</p>
+        <button class="btn-primary" style="margin-top:20px;" onclick="openModal('free-audit')">Claim Free Assessment →</button>
+      </div>
+      <div class="offer-price">
+        <div class="was">Value ₹45,000</div>
+        <div class="now">FREE</div>
+        <div class="per">For qualifying businesses</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-label">About Us</div>
+      <h2 class="section-title">Privacy Expertise<br><span class="accent">Built from Practice</span></h2>
+      <div class="about-text" style="margin-top:28px;">
+        <p>MarkPrivacy was founded by Anvesh M, an OneTrust Certified Data Privacy Consultant with over 12 years of hands-on experience delivering regulatory compliance, data governance, and privacy programme management for global enterprises across healthcare, technology, and financial services sectors.</p>
+        <p>We combine deep regulatory knowledge across GDPR, CCPA, DPDPA, and HIPAA with practical implementation experience on the OneTrust platform — including Consent &amp; Preferences, Assessment Automation, and Privacy Rights modules. We don't just advise; we embed with your teams to architect, build, and validate privacy solutions that are audit-ready from day one.</p>
+        <p>Having led Privacy Impact Assessments (PIAs), Data Protection Impact Assessments (DPIAs), and enterprise-scale consent management deployments at organisations like Genpact and Wipro, we bring both the strategic vision and the technical depth to guide your privacy journey — from initial gap assessment through to production go-live and beyond.</p>
+      </div>
+      <div class="about-values">
+        <div class="value-item">Privacy by Design</div>
+        <div class="value-item">GDPR / CCPA / DPDPA / HIPAA</div>
+        <div class="value-item">OneTrust Implementation</div>
+        <div class="value-item">Consent Management</div>
+        <div class="value-item">PIA &amp; DPIA Facilitation</div>
+        <div class="value-item">RoPA &amp; DSR Management</div>
+        <div class="value-item">Data Governance</div>
+        <div class="value-item">Vendor Risk Assessment</div>
+
+      </div>
+    </div>
+    <div>
+      <svg viewBox="0 0 480 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;">
+        <rect x="20" y="20" width="200" height="160" rx="16" fill="#F0F4FB" stroke="#D6E0F0" stroke-width="1.5"/>
+        <rect x="260" y="20" width="200" height="72" rx="16" fill="#1E5FC2"/>
+        <rect x="260" y="108" width="200" height="72" rx="16" fill="#F0F4FB" stroke="#D6E0F0" stroke-width="1.5"/>
+        <rect x="20" y="200" width="440" height="160" rx="16" fill="#0A1628"/>
+        <text x="120" y="108" fill="#0A1628" font-size="28" text-anchor="middle" font-family="Syne, sans-serif" font-weight="800">12+</text>
+        <text x="120" y="126" fill="#5A6A84" font-size="11" text-anchor="middle" font-family="Inter, sans-serif">Years of Experience</text>
+        <text x="360" y="63" fill="white" font-size="14" text-anchor="middle" font-family="Syne, sans-serif" font-weight="700">GDPR | CCPA | DPDPA | HIPAA</text>
+        <text x="360" y="82" fill="rgba(255,255,255,0.6)" font-size="10" text-anchor="middle" font-family="Inter, sans-serif">Multi-Regulation Coverage</text>
+        <text x="360" y="148" fill="#1E5FC2" font-size="22" text-anchor="middle" font-family="Syne, sans-serif" font-weight="800">OneTrust</text>
+        <text x="360" y="166" fill="#5A6A84" font-size="10" text-anchor="middle" font-family="Inter, sans-serif">Certified | 12+ Yrs Implementation Experience</text>
+        <text x="240" y="262" fill="white" font-size="15" text-anchor="middle" font-family="Syne, sans-serif" font-weight="700">Our Approach: Assess → Design → Implement → Monitor</text>
+        <rect x="40" y="290" width="80" height="6" rx="3" fill="#1E5FC2"/>
+        <rect x="140" y="290" width="80" height="6" rx="3" fill="#00D4FF"/>
+        <rect x="240" y="290" width="80" height="6" rx="3" fill="#1E5FC2"/>
+        <rect x="340" y="290" width="80" height="6" rx="3" fill="#00D4FF"/>
+        <text x="80" y="316" fill="rgba(255,255,255,0.5)" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">ASSESS</text>
+        <text x="180" y="316" fill="rgba(255,255,255,0.5)" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">DESIGN</text>
+        <text x="280" y="316" fill="rgba(255,255,255,0.5)" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">IMPLEMENT</text>
+        <text x="380" y="316" fill="rgba(255,255,255,0.5)" font-size="9" text-anchor="middle" font-family="Inter, sans-serif">MONITOR</text>
+        <circle cx="80" cy="290" r="8" fill="#1E5FC2"/>
+        <circle cx="180" cy="290" r="8" fill="#00D4FF"/>
+        <circle cx="280" cy="290" r="8" fill="#1E5FC2"/>
+        <circle cx="380" cy="290" r="8" fill="#00D4FF"/>
+        <text x="80" y="294" fill="white" font-size="8" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700">1</text>
+        <text x="180" y="294" fill="#0A1628" font-size="8" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700">2</text>
+        <text x="280" y="294" fill="white" font-size="8" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700">3</text>
+        <text x="380" y="294" fill="#0A1628" font-size="8" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700">4</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Team -->
+  <div class="team-section">
+    <div class="centered">
+      <div class="section-label">Leadership</div>
+      <h2 class="section-title">The People Behind <span class="accent">MarkPrivacy</span></h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card" style="width:320px;">
+        <div class="team-avatar" style="background:none;border:3px solid var(--blue);overflow:hidden;">
+          <img src="images/anvesh-profile.png" alt="Anvesh M" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
+        </div>
+        <h4>Anvesh M</h4>
+        <div class="role">CEO &amp; Founder</div>
+        <p class="bio">OneTrust Certified Data Privacy Consultant with 12+ years of experience in GDPR, CCPA, DPDPA &amp; HIPAA compliance. Former Genpact &amp; Wipro — delivered enterprise-scale consent management and privacy programmes across healthcare and global enterprises.</p>
+        <div class="team-links">
+          <a href="mailto:anveshforwork@gmail.com" title="Email">@</a>
+          <a href="tel:+919390565515" title="Call">☎</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-intro">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Comprehensive Privacy <span class="accent">Solutions</span></h2>
+    <p class="section-sub">From regulatory gap assessments to full-scale consent platform deployment — we deliver end-to-end privacy services tailored to your industry and risk profile.</p>
+    <div class="service-cats">
+      <!-- GDPR/CCPA/DPDPA -->
+      <div class="service-cat featured">
+        <div class="service-badge" style="background:rgba(0,212,255,0.2);color:#00D4FF;">Core Service</div>
+        <div class="service-icon">⚖️</div>
+        <h3>Privacy Compliance Solutions</h3>
+        <p style="color:rgba(255,255,255,.65)">End-to-end compliance delivery under the world's leading privacy regulations. We handle the complexity so your business can focus on growth.</p>
+        <ul class="service-list">
+          <li>GDPR Gap Analysis &amp; Remediation</li>
+          <li>CCPA / CPRA Compliance Programme</li>
+          <li>India DPDPA Readiness Assessment</li>
+          <li>Privacy Policy &amp; Notice Drafting</li>
+          <li>Data Processing Agreements (DPAs)</li>
+          <li>DPIA / PIA Facilitation</li>
+          <li>Records of Processing Activities (RoPA)</li>
+          <li>Data Subject Rights Management</li>
+        </ul>
+      </div>
+      <!-- Consent Management -->
+      <div class="service-cat">
+        <div class="service-badge">Consent</div>
+        <div class="service-icon">✅</div>
+        <h3>Consent Management Solutions</h3>
+        <p>Implement robust, regulation-ready consent frameworks that respect user preferences while keeping your marketing and analytics operations fully compliant.</p>
+        <ul class="service-list">
+          <li>Consent Banner Design &amp; Configuration</li>
+          <li>Preference Centre Implementation</li>
+          <li>Cookie Audit &amp; Categorisation</li>
+          <li>Tag Manager Integration (GTM, Tealium)</li>
+          <li>Consent Proof &amp; Audit Trails</li>
+          <li>Cross-Domain Consent Synchronisation</li>
+          <li>Opt-In / Opt-Out Programme Design</li>
+        </ul>
+      </div>
+      <!-- OneTrust -->
+      <div class="service-cat">
+        <div class="service-badge">OneTrust</div>
+        <div class="service-icon">🔧</div>
+        <h3>OneTrust Implementation &amp; Support</h3>
+        <p>Hands-on configuration, deployment, and ongoing management of OneTrust's privacy, consent, and third-party risk modules for organisations of every size.</p>
+        <ul class="service-list">
+          <li>OneTrust Consent &amp; Preferences Module</li>
+          <li>Data Mapping &amp; Discovery (Athena)</li>
+          <li>Assessment Automation Module</li>
+          <li>Privacy Rights Automation</li>
+          <li>Vendor Risk Management</li>
+          <li>OneTrust Healthcheck &amp; Optimisation</li>
+          <li>Staff Training &amp; Platform Handover</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="pricing-section">
+      <div class="centered">
+        <div class="section-label">Engagement Models</div>
+        <h2 class="section-title">Transparent <span class="accent">Pricing</span></h2>
+        <p class="section-sub">Choose the engagement that fits your needs. All packages include a kickoff workshop and dedicated consultant access.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-name">Essentials</div>
+          <div class="price-amount">₹75K</div>
+          <div class="price-period">one-time project</div>
+          <p class="price-desc">Ideal for startups and SMEs taking their first steps toward compliance.</p>
+          <ul class="price-feats">
+            <li class="price-feat">Privacy Gap Assessment</li>
+            <li class="price-feat">GDPR or CCPA Roadmap</li>
+            <li class="price-feat">Privacy Notice Drafting</li>
+            <li class="price-feat">Basic Cookie Audit</li>
+            <li class="price-feat">2 Stakeholder Workshops</li>
+          </ul>
+          <button class="btn-price" onclick="openModal('essentials')">Get Started</button>
+        </div>
+        <div class="price-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <div class="price-name">Professional</div>
+          <div class="price-amount">₹2.2L</div>
+          <div class="price-period">per quarter</div>
+          <p class="price-desc">Comprehensive compliance delivery plus OneTrust consent implementation.</p>
+          <ul class="price-feats">
+            <li class="price-feat">Everything in Essentials</li>
+            <li class="price-feat">Multi-Regulation Coverage</li>
+            <li class="price-feat">OneTrust Consent Module</li>
+            <li class="price-feat">DPIA / PIA Facilitation</li>
+            <li class="price-feat">DSR Workflow Setup</li>
+            <li class="price-feat">Quarterly Review Calls</li>
+          </ul>
+          <button class="btn-price" onclick="openModal('professional')">Get Started</button>
+        </div>
+        <div class="price-card">
+          <div class="price-name">Enterprise</div>
+          <div class="price-amount">Custom</div>
+          <div class="price-period">tailored engagement</div>
+          <p class="price-desc">Full-scale privacy programme for large organisations with complex needs.</p>
+          <ul class="price-feats">
+            <li class="price-feat">Everything in Professional</li>
+            <li class="price-feat">Full OneTrust Suite</li>
+            <li class="price-feat">Vendor Risk Management</li>
+            <li class="price-feat">DPO-as-a-Service</li>
+            <li class="price-feat">Regulatory Liaison Support</li>
+            <li class="price-feat">Dedicated Account Manager</li>
+          </ul>
+          <button class="btn-price" onclick="openModal('enterprise')">Request Proposal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING -->
+<section id="training">
+  <div class="training-intro">
+    <div class="section-label">Build Capability</div>
+    <h2 class="section-title">Privacy Training <span class="accent">Programmes</span></h2>
+    <p class="section-sub">Equip your teams with the knowledge and confidence to handle personal data responsibly. Our training programmes are practitioner-led, regulation-specific, and tailored to your organisation's context.</p>
+
+    <div class="training-grid">
+
+      <!-- Course 1 -->
+      <div class="training-card">
+        <div class="training-card-header">
+          <div class="training-level level-foundation">Foundation</div>
+          <h3>Data Privacy Essentials</h3>
+          <p>A foundational programme for all employees on what personal data is, why it matters, and how to handle it correctly.</p>
+        </div>
+        <div class="training-card-body">
+          <div class="training-meta">
+            <div class="training-meta-item">⏱ <strong>Half-day</strong> (4 hrs)</div>
+            <div class="training-meta-item">👥 <strong>All Staff</strong></div>
+            <div class="training-meta-item">📍 <strong>Online / On-site</strong></div>
+          </div>
+          <ul class="training-topics">
+            <li>What is personal data &amp; why privacy matters</li>
+            <li>Key principles of GDPR, CCPA &amp; DPDPA</li>
+            <li>Lawful basis for data processing</li>
+            <li>Recognising and reporting data breaches</li>
+            <li>Data subject rights &amp; how to handle requests</li>
+            <li>Dos and don'ts in day-to-day data handling</li>
+          </ul>
+          <div class="training-footer">
+            <div class="training-price-tag">₹15,000 <span>/ session</span></div>
+            <button class="btn-training" onclick="openModal('training-enquiry')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="training-card">
+        <div class="training-card-header">
+          <div class="training-level level-intermediate">Intermediate</div>
+          <h3>GDPR &amp; CCPA Compliance for Teams</h3>
+          <p>Targeted training for compliance, legal, IT, and marketing teams on operationalising GDPR and CCPA obligations.</p>
+        </div>
+        <div class="training-card-body">
+          <div class="training-meta">
+            <div class="training-meta-item">⏱ <strong>Full-day</strong> (8 hrs)</div>
+            <div class="training-meta-item">👥 <strong>Compliance / Legal / IT</strong></div>
+            <div class="training-meta-item">📍 <strong>Online / On-site</strong></div>
+          </div>
+          <ul class="training-topics">
+            <li>Deep-dive into GDPR Articles &amp; CCPA provisions</li>
+            <li>Building and maintaining Records of Processing (RoPA)</li>
+            <li>Conducting Privacy Impact Assessments (PIAs)</li>
+            <li>Data Protection Impact Assessments (DPIAs)</li>
+            <li>Managing Data Subject Rights (DSR) workflows</li>
+            <li>Cookie compliance &amp; consent banner configuration</li>
+            <li>Third-party vendor risk &amp; DPA obligations</li>
+          </ul>
+          <div class="training-footer">
+            <div class="training-price-tag">₹35,000 <span>/ session</span></div>
+            <button class="btn-training" onclick="openModal('training-enquiry')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="training-card">
+        <div class="training-card-header">
+          <div class="training-level level-intermediate">Intermediate</div>
+          <h3>India DPDPA Readiness Workshop</h3>
+          <p>A focused workshop on India's Digital Personal Data Protection Act — what it means for your organisation and how to prepare.</p>
+        </div>
+        <div class="training-card-body">
+          <div class="training-meta">
+            <div class="training-meta-item">⏱ <strong>Half-day</strong> (4 hrs)</div>
+            <div class="training-meta-item">👥 <strong>Legal / DPO / Compliance</strong></div>
+            <div class="training-meta-item">📍 <strong>Online / On-site</strong></div>
+          </div>
+          <ul class="training-topics">
+            <li>Overview of DPDPA 2023 &amp; its key provisions</li>
+            <li>Obligations of Data Fiduciaries &amp; Processors</li>
+            <li>Consent requirements under Indian law</li>
+            <li>Data Localisation &amp; cross-border transfer rules</li>
+            <li>Data Principal rights &amp; grievance redressal</li>
+            <li>Penalties, enforcement &amp; regulatory expectations</li>
+            <li>Gap analysis: DPDPA vs. GDPR vs. CCPA</li>
+          </ul>
+          <div class="training-footer">
+            <div class="training-price-tag">₹25,000 <span>/ session</span></div>
+            <button class="btn-training" onclick="openModal('training-enquiry')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="training-card">
+        <div class="training-card-header">
+          <div class="training-level level-advanced">Advanced</div>
+          <h3>OneTrust Consent Management — Practitioner</h3>
+          <p>Hands-on technical training for teams implementing and managing OneTrust's Consent &amp; Preferences module.</p>
+        </div>
+        <div class="training-card-body">
+          <div class="training-meta">
+            <div class="training-meta-item">⏱ <strong>2 Days</strong> (16 hrs)</div>
+            <div class="training-meta-item">👥 <strong>Technical / Privacy Ops</strong></div>
+            <div class="training-meta-item">📍 <strong>Online / On-site</strong></div>
+          </div>
+          <ul class="training-topics">
+            <li>OneTrust platform architecture &amp; module overview</li>
+            <li>Consent banner setup, geolocation &amp; language rules</li>
+            <li>Preference Centre design &amp; configuration</li>
+            <li>Source-level integrations &amp; exclusion rules</li>
+            <li>Consent expiry, renewal &amp; audit trail management</li>
+            <li>Tag Manager integration (GTM &amp; Adobe Launch)</li>
+            <li>Testing, UAT, and go-live best practices</li>
+          </ul>
+          <div class="training-footer">
+            <div class="training-price-tag">₹65,000 <span>/ session</span></div>
+            <button class="btn-training" onclick="openModal('training-enquiry')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 5 -->
+      <div class="training-card">
+        <div class="training-card-header">
+          <div class="training-level level-advanced">Advanced</div>
+          <h3>HIPAA Privacy &amp; Security Training</h3>
+          <p>Comprehensive HIPAA compliance training for healthcare organisations handling Protected Health Information (PHI).</p>
+        </div>
+        <div class="training-card-body">
+          <div class="training-meta">
+            <div class="training-meta-item">⏱ <strong>Full-day</strong> (8 hrs)</div>
+            <div class="training-meta-item">👥 <strong>Healthcare / IT / Compliance</strong></div>
+            <div class="training-meta-item">📍 <strong>Online / On-site</strong></div>
+          </div>
+          <ul class="training-topics">
+            <li>HIPAA Privacy Rule &amp; Security Rule fundamentals</li>
+            <li>Identifying &amp; safeguarding PHI and ePHI</li>
+            <li>Minimum necessary standard &amp; access controls</li>
+            <li>Business Associate Agreements (BAAs)</li>
+            <li>Breach notification procedures &amp; timelines</li>
+            <li>HIPAA + GDPR: managing dual obligations</li>
+            <li>Audit readiness &amp; documentation requirements</li>
+          </ul>
+          <div class="training-footer">
+            <div class="training-price-tag">₹45,000 <span>/ session</span></div>
+            <button class="btn-training" onclick="openModal('training-enquiry')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 6 -->
+      <div class="training-card">
+        <div class="training-card-header">
+          <div class="training-level level-foundation">Foundation</div>
+          <h3>Privacy by Design for Product Teams</h3>
+          <p>Practical privacy-by-design training for product managers, designers, and engineers building data-driven products.</p>
+        </div>
+        <div class="training-card-body">
+          <div class="training-meta">
+            <div class="training-meta-item">⏱ <strong>Half-day</strong> (4 hrs)</div>
+            <div class="training-meta-item">👥 <strong>Product / Engineering / Design</strong></div>
+            <div class="training-meta-item">📍 <strong>Online / On-site</strong></div>
+          </div>
+          <ul class="training-topics">
+            <li>7 Principles of Privacy by Design</li>
+            <li>Data minimisation &amp; purpose limitation in product</li>
+            <li>Privacy risk assessment in the SDLC</li>
+            <li>Consent UX &amp; dark pattern avoidance</li>
+            <li>Secure data handling &amp; retention defaults</li>
+            <li>Building user trust through transparent design</li>
+          </ul>
+          <div class="training-footer">
+            <div class="training-price-tag">₹20,000 <span>/ session</span></div>
+            <button class="btn-training" onclick="openModal('training-enquiry')">Enquire Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Why Train With Us -->
+    <div class="training-highlights">
+      <div class="highlight-item">
+        <div class="highlight-icon">🏅</div>
+        <div>
+          <h4>Practitioner-Led</h4>
+          <p>All training is delivered by Anvesh M — an active consultant with 12+ years of real-world privacy implementation experience.</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">🎯</div>
+        <div>
+          <h4>Context-Specific</h4>
+          <p>We tailor every session to your industry, data environment, and the specific regulations that apply to your business.</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">📄</div>
+        <div>
+          <h4>Certificate of Completion</h4>
+          <p>Participants receive a certificate upon completion, supporting your organisation's privacy awareness documentation.</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">🔄</div>
+        <div>
+          <h4>Ongoing Support</h4>
+          <p>Post-training Q&amp;A support and access to reference materials for 30 days after every programme.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Training Enquiry Modal -->
+<div class="modal-overlay" id="modal-training-enquiry">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('training-enquiry')">×</button>
+    <div class="modal-tag" style="background:var(--blue);color:white;">Training Enquiry</div>
+    <h2>Book a Training Programme</h2>
+    <p>Tell us which programme interests you and your team size — we'll get back with availability, pricing, and a tailored agenda.</p>
+    <div class="modal-input-group" style="flex-direction:column;gap:12px;">
+      <input type="text" placeholder="Your name" style="padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;"/>
+      <input type="email" placeholder="Work email address" style="padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;"/>
+    </div>
+    <button class="btn-primary" style="width:100%;margin-top:16px;" onclick="claimOffer()">Send Enquiry →</button>
+    <div class="modal-timer" style="margin-top:14px;">📞 Or call us directly: <span>+91 93905 65515</span></div>
+  </div>
+</div>
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="centered">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title" style="color:white;">Start Your Privacy <span style="color:var(--cyan)">Journey Today</span></h2>
+      <p class="section-sub">Have a compliance question? Ready to start a project? Drop us a message and we'll respond within one business day.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+919390565515">+91 93905 65515</a></p>
+            <p style="margin-top:4px;font-size:.8rem;">Mon – Fri, 9 AM – 6 PM IST</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:anveshforwork@gmail.com">anveshforwork@gmail.com</a></p>
+            <p style="margin-top:4px;font-size:.8rem;"><a href="tel:+919390565515" style="color:rgba(255,255,255,.4);">+91 93905 65515</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p>Hyderabad, Telangana, India</p>
+            <p style="margin-top:4px;font-size:.8rem;color:rgba(255,255,255,.4);">Serving clients globally</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🗓️</div>
+          <div>
+            <h4>Book a Consultation</h4>
+            <p>Free 30-min discovery call</p>
+            <p style="margin-top:6px;"><a href="#" onclick="openModal('free-audit')" style="color:var(--cyan);font-weight:600;font-size:.88rem;">Schedule Now →</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Send Us an Enquiry</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Mark"/>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Anvesh"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Work Email</label>
+          <input type="email" placeholder="you@company.com"/>
+        </div>
+        <div class="form-group">
+          <label>Company</label>
+          <input type="text" placeholder="Your Organisation"/>
+        </div>
+        <div class="form-group">
+          <label>Service Interest</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>GDPR Compliance</option>
+            <option>CCPA / CPRA Compliance</option>
+            <option>DPDPA Readiness</option>
+            <option>Consent Management</option>
+            <option>OneTrust Implementation</option>
+            <option>Privacy Gap Assessment</option>
+            <option>DPO-as-a-Service</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell us about your privacy challenge or project..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="handleFormSubmit()">Send Enquiry →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 MarkPrivacy. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<!-- FLOAT OFFER -->
+<div class="float-offer" id="floatOffer" onclick="openModal('free-audit')">
+  <button class="float-close" onclick="event.stopPropagation();document.getElementById('floatOffer').style.display='none'">×</button>
+  <div class="f-tag">🔥 Limited Offer</div>
+  <h4>Free Privacy Audit</h4>
+  <p>Worth ₹45,000 — yours free. Limited slots.</p>
+</div>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-free-audit">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('free-audit')">×</button>
+    <div class="modal-tag">🎁 Exclusive Offer</div>
+    <h2>Free Privacy Gap Assessment</h2>
+    <p>We'll analyse your current data practices, identify compliance gaps under GDPR, CCPA, or DPDPA, and deliver a prioritised action roadmap — at zero cost.</p>
+    <div class="modal-price">
+      <span class="m-was">₹45,000</span>
+      <span class="m-now">FREE</span>
+      <span class="m-off">100% OFF</span>
+    </div>
+    <ul class="modal-perks">
+      <li>60-minute expert consultation</li>
+      <li>Written gap analysis report</li>
+      <li>Prioritised compliance roadmap</li>
+      <li>No strings attached</li>
+    </ul>
+    <div class="modal-input-group">
+      <input type="email" placeholder="Enter your work email"/>
+      <button class="btn-primary" onclick="claimOffer()">Claim Now</button>
+    </div>
+    <div class="modal-timer">⏳ Only <span id="slots">7</span> slots remaining this month</div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-essentials">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('essentials')">×</button>
+    <div class="modal-tag">Essentials Package</div>
+    <h2>Get Started with Privacy</h2>
+    <p>Perfect for startups and growing businesses building their first compliance programme.</p>
+    <div class="modal-price">
+      <span class="m-now" style="font-size:2rem;">₹75,000</span>
+      <span class="m-off" style="background:rgba(30,95,194,.1);color:var(--blue);">One-Time</span>
+    </div>
+    <ul class="modal-perks">
+      <li>Privacy Gap Assessment</li>
+      <li>Regulation Roadmap (GDPR or CCPA)</li>
+      <li>Privacy Notice Drafting</li>
+      <li>Basic Cookie Audit</li>
+      <li>2 Stakeholder Workshops</li>
+    </ul>
+    <a href="#contact" class="btn-primary" style="display:block;text-align:center;text-decoration:none;" onclick="closeModal('essentials')">Enquire Now →</a>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-professional">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('professional')">×</button>
+    <div class="modal-tag" style="background:var(--blue);color:white;">⭐ Most Popular</div>
+    <h2>Professional Package</h2>
+    <p>Comprehensive privacy compliance plus OneTrust consent deployment for scaling organisations.</p>
+    <div class="modal-price">
+      <span class="m-now">₹2.2L</span>
+      <span class="m-off">Per Quarter</span>
+    </div>
+    <ul class="modal-perks">
+      <li>Multi-regulation compliance coverage</li>
+      <li>OneTrust Consent Module setup</li>
+      <li>DPIA / PIA facilitation</li>
+      <li>DSR workflow automation</li>
+      <li>Quarterly review &amp; reporting</li>
+    </ul>
+    <a href="#contact" class="btn-primary" style="display:block;text-align:center;text-decoration:none;" onclick="closeModal('professional')">Start Your Engagement →</a>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-enterprise">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('enterprise')">×</button>
+    <div class="modal-tag" style="background:var(--navy);color:var(--cyan);">Enterprise</div>
+    <h2>Enterprise Proposal</h2>
+    <p>Full-scale privacy programme management for large, complex organisations. Let's discuss your specific needs and build a tailored proposal.</p>
+    <ul class="modal-perks">
+      <li>Full OneTrust Suite implementation</li>
+      <li>DPO-as-a-Service</li>
+      <li>Vendor Risk Management</li>
+      <li>Regulatory liaison support</li>
+      <li>Dedicated account manager</li>
+    </ul>
+    <div class="modal-input-group">
+      <input type="email" placeholder="Your work email"/>
+      <button class="btn-primary" onclick="claimOffer()">Request Proposal</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-success">
+  <div class="modal" style="text-align:center;padding:52px 40px;">
+    <button class="modal-close" onclick="closeAllModals()">×</button>
+    <div style="font-size:3rem;margin-bottom:16px;">🎉</div>
+    <h2 style="margin-bottom:12px;">We'll Be in Touch!</h2>
+    <p>Thank you for reaching out. Mark Anvesh or a member of our team will contact you within one business day.</p>
+    <button class="btn-primary" style="margin-top:24px;" onclick="closeAllModals()">Close</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
