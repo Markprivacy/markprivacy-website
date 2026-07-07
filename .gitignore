@@ -10,3 +10,10 @@ Thumbs.db
 *.log
 *.tmp
 html_cleaned.html
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
